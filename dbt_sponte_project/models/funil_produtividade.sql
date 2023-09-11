@@ -91,7 +91,7 @@ realizado as(
 		select *
 		from perdeu
 	) b
-	left join bi_sponte.deals a on a."_airbyte_deals_hashid" = b."_airbyte_deals_hashid" 
+	right join bi_sponte.deals a on a."_airbyte_deals_hashid" = b."_airbyte_deals_hashid" 
 	left join bi_sponte.deal_pipelines p on p.pipelineid = b.pipeline
 	left join bi_sponte.owners o on o.id = b.vendedor 
 ),
