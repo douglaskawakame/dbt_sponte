@@ -64,6 +64,7 @@ realizado as(
 		else b.servicosadicionais__categoria
 	end produto,
 	o.firstname vendedor,
+	b.amount valor,
 	1 cont,
 	case when b.categoria2 = 'MQL' then 1 else 0 end mql,
 	case when b.categoria2 = 'SQL' then 1 else 0 end as sql,
@@ -122,6 +123,7 @@ budget as (
 			else produto
 		end produto,
 		null vendedor,
+		0 valor,
 		0 cont,
 		0 mql,
 		0 as sql,
