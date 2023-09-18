@@ -129,9 +129,9 @@ budget as (
 		0 as sql,
 		0 ganhou,
 		valor budget,
-		case when descr_macro = 'MQL' then 1 else 0 end bgt_mql,
-		case when descr_macro = 'SQL' then 1 else 0 end as bgt_sql,
-		case when descr_macro = 'Vendas' then 1 else 0 end bgt_ganhou
+		case when descr_macro = 'MQL' then valor else 0 end bgt_mql,
+		case when descr_macro = 'SQL' then valor else 0 end as bgt_sql,
+		case when descr_macro = 'Vendas' then valor else 0 end bgt_ganhou
 	from bi_sponte.budget
 	where tipo = 'Funil'
 	and descr_macro != 'Leads'
